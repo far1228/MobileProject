@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        ext.kotlin_version = '1.8.0'
+        google() // Google's Maven repository
+        mavenCentral() // Menyertakan Maven Central untuk dependensi lain
+    }
+    dependencies {
+        classpath 'com.google.gms:google-services:4.3.13' 
+        classpath 'com.android.tools.build:gradle:7.4.2'// Plugin Google Services
+    }
+}
+
+allprojects {
+    repositories {
+        google() // Repositori Google untuk mengunduh dependensi
+        mavenCentral() // Repositori Maven Central
+    }
+}
+
+rootProject.buildDir = "../build" // Menentukan direktori build untuk root project
+
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}" // Mengatur direktori build untuk subproject
+    project.evaluationDependsOn(":app") // Mengatur evaluasi ketergantungan pada project aplikasi
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir // Tugas untuk membersihkan direktori build
+}

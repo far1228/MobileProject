@@ -1,0 +1,83 @@
+name: project_mobile
+description: "A new Flutter project."
+publish_to: 'none'  # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.3 <4.0.0"  # Versi SDK Flutter sesuai konfigurasi
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  get: ^4.6.6
+  firebase_core: ^3.6.0            # Firebase Core for initialization
+  firebase_auth: ^5.3.1            # Firebase Authentication
+  google_sign_in: ^6.0.2           # Google Sign-In for Firebase Auth
+  cloud_firestore: ^5.4.4          # Firestore Database
+  firebase_storage: ^12.3.4        # Firebase Storage for image/file support
+  image_picker: ^1.0.4+2           # For selecting images from gallery or camera
+  firebase_messaging: ^15.1.4      # Firebase Messaging for push notifications
+  flutter_local_notifications: ^17.2.3  # Local notifications for displaying notifications
+  provider: ^6.1.2
+  get_storage: ^2.1.1
+  qr_flutter: ^4.1.0
+  qr_code_scanner_plus: ^2.0.6
+  video_player: ^2.9.1
+  permission_handler: ^11.3.1
+  audioplayers: ^6.1.0
+  just_audio: ^0.9.42  
+  geolocator: ^11.1.0
+  geocoding: ^3.0.0
+  google_maps_flutter: ^2.6.1
+  url_launcher: ^6.1.5
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  assets:
+    - assets/images/capybara.png
+    - assets/icons/facebook.png
+    - assets/icons/google.png
+    - assets/images/geprek.png
+    - assets/icons/cart.png
+    - assets/icons/notification.png
+    - assets/icons/setting.png
+    - assets/icons/meal.png
+    - assets/icons/drink.png
+    - assets/icons/snack.png
+    - assets/icons/favorite.png
+    - assets/icons/home.png
+    - assets/icons/orders.png
+    - assets/icons/profile.png
+    - assets/images/bakar.png
+    - assets/images/curry.png
+    - assets/images/jeruk.png
+    - assets/images/kentang.png
+    - assets/images/onion.png
+    - assets/images/sate.png
+    - assets/images/teh.png
+
+  uses-material-design: true
+
+# Additional iOS configuration (if using image_picker or Firebase)
+# Ensure this is included in iOS Runner/Info.plist if image access is needed
+  # Info.plist permissions
+  # <key>NSPhotoLibraryUsageDescription</key>
+  # <string>We need access to your photo library to pick images.</string>
+  # <key>NSCameraUsageDescription</key>
+  # <string>We need access to your camera to capture images.</string>
+  # 
+  # For Firebase Messaging background notifications
+  # <key>UIBackgroundModes</key>
+  # <array>
+  #     <string>fetch</string>
+  #     <string>remote-notification</string>
+  # </array>
+  # <key>FirebaseAppDelegateProxyEnabled</key>
+  # <false/>
